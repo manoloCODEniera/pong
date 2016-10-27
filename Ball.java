@@ -29,12 +29,12 @@ public class Ball {
 		else if (y + ya > game.getHeight() - DIAMETER)
 			ya = -game.speed;
 		else if (collision()){
-			xa = -game.speed;
+			xa = game.speed;
 			//y = game.racquet.getTopY() - DIAMETER; useless and will make the program not run smooth
 			game.speed++;
 		}
 		else if (collision2()){
-				xa = game.speed;
+				xa = -game.speed;
 				game.speed++;
 		} else 
 			changeDirection = false;
